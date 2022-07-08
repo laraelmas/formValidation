@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+  <title>Form</title>
+</head>
+
+<body>
+  <form id="form">
+    <p id="account">Already Have an Account?</p>
+    <button id="sign-in" type="button" onclick="toggleAction()">Sign in</button>
+    <p>or</p>
+    <div id="username-div">
+      <label for="username">User name</label>
+      <input type="text" name="username" id="username" placeholder="Your name" onblur="nameValidate()">
+      <p id="nameError" style="display: none; color: rgb(50, 36, 54);">Please put correct name</p>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="lara@gmail.com" onblur="emailValidate()">
+      <p id="emailError" style="display: none; color: rgb(50, 36, 54);">Please put correct email</p>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="Password" onblur="passwordValidate()">
+      <p id="passwordError" style="display: none; color: rgb(50, 36, 54);">Password should be at least 8 character</p>
+    </div>
+    <div>
+      <button disabled id="submitButton" type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+
+</html>
